@@ -11,6 +11,7 @@ This project is a complete multi-page portfolio prepared for GitHub Pages deploy
 - Case: `cases/case-campus-wayfinding.html`
 - Case: `cases/case-booking-flow.html`
 - Case: `cases/case-content-system.html`
+- Case: `cases/case-ai-resume-checker.html`
 - Error page: `404.html`
 
 ## Quick publish to GitHub Pages
@@ -48,6 +49,7 @@ git push -u origin main
    - `/cases/case-campus-wayfinding.html`
    - `/cases/case-booking-flow.html`
    - `/cases/case-content-system.html`
+   - `/cases/case-ai-resume-checker.html`
 
 ## Final checklist for your assignment
 

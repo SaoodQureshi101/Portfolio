@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study | AI Resume Analyzer & Job Match Assistant</title>
+  <meta name="description" content="Case study for AI Resume Analyzer and Job Match Assistant project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="../index.html">Saood Qureshi Portfolio</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../work.html">Work</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <header class="case-header">
+        <h1 class="page-title">AI Resume Analyzer & Job Match Assistant</h1>
+        <p><strong>Repository:</strong> <a href="https://github.com/SaoodQureshi101/AI-Resume-Checker" target="_blank" rel="noopener noreferrer">github.com/SaoodQureshi101/AI-Resume-Checker</a></p>
+        <p><strong>Goal:</strong> Help job seekers quickly measure resume-job fit, identify missing skills, and improve resume quality.</p>
+      </header>
+
+      <section class="case-section">
+        <h2>Abstract</h2>
+        <p>
+          This project analyzes a resume against a target job description, finds alignment and gaps,
+          and provides practical suggestions so applicants can improve role relevance before submitting.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Problem</h2>
+        <p>
+          Applicants often apply without knowing whether their resume content actually matches the role.
+          This mismatch can reduce callbacks even when candidates have relevant experience.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Solution</h2>
+        <ul class="list-tight">
+          <li>Extract key skills and qualifications from the resume</li>
+          <li>Compare them to job-description requirements</li>
+          <li>Compute a semantic match score</li>
+          <li>Highlight missing or weakly represented skills</li>
+          <li>Suggest practical resume improvements</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Methods</h2>
+        <p>
+          The app uses NLP and transformer-based semantic matching. Sentence-BERT embeddings are generated for
+          resumes and job descriptions, then cosine similarity is used to evaluate alignment.
+          A hybrid layer of deterministic skill extraction improves transparency and guidance.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>AI Technology Used</h2>
+        <ul class="list-tight">
+          <li>sentence-transformers model: <code>all-MiniLM-L6-v2</code></li>
+          <li>Hybrid approach: semantic embeddings + keyword skill extraction</li>
+          <li>Cosine similarity via scikit-learn</li>
+          <li>Optional guidance utilities in <code>utils/ai_features.py</code></li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Tools and Technologies</h2>
+        <ul class="list-tight">
+          <li>Python</li>
+          <li>Hugging Face Transformers / Sentence-BERT</li>
+          <li>Streamlit</li>
+          <li>scikit-learn</li>
+          <li>PyPDF2</li>
+          <li>reportlab</li>
+          <li>requests (Data USA API salary lookup)</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>How to Run</h2>
+        <ol class="list-tight">
+          <li>Open folder: <code>cd "C:\Users\1\OneDrive\Desktop\ai-resume-analyzer"</code></li>
+          <li>Create venv: <code>python -m venv .venv</code></li>
+          <li>Activate venv: <code>.\.venv\Scripts\Activate.ps1</code></li>
+          <li>Install deps: <code>pip install -r requirements.txt</code></li>
+          <li>Run app: <code>streamlit run app.py</code></li>
+        </ol>
+        <p>
+          Note: Do not run with <code>python app.py</code> because this is a Streamlit app.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Demo Links</h2>
+        <ul class="list-tight">
+          <li><a href="https://youtu.be/LdeJYbPsJ9o" target="_blank" rel="noopener noreferrer">YouTube Demo</a></li>
+          <li><a href="https://docs.google.com/presentation/d/1qDIWOJoPesEcXJQ8VRq1xuSqldNvTR0x_As3nVF3Kqg/edit?slide=id.g3d527d1a287_1_19#slide=id.g3d527d1a287_1_19" target="_blank" rel="noopener noreferrer">Google Slides</a></li>
+        </ul>
+      </section>
+
+      <a class="btn secondary" href="../work.html">Back to Work</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Case study 4 of 4.</div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
