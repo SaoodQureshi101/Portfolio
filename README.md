@@ -8,6 +8,7 @@ This project is a complete multi-page portfolio prepared for GitHub Pages deploy
 - Work: `work.html`
 - About: `about.html`
 - Contact: `contact.html`
+- Resume: `resume.html`
 - Case: `cases/case-campus-wayfinding.html`
 - Case: `cases/case-booking-flow.html`
 - Case: `cases/case-content-system.html`
@@ -47,6 +48,7 @@ git push -u origin main
    - `/work.html`
    - `/about.html`
    - `/contact.html`
+   - `/resume.html`
    - `/cases/case-campus-wayfinding.html`
    - `/cases/case-booking-flow.html`
    - `/cases/case-content-system.html`
