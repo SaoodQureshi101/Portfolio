@@ -2,7 +2,7 @@
 
 ## Live URL
 
-https://mrqureshi-android.github.io/Portfolio/
+https://saoodqureshi101.github.io/Portfolio/
 
 ## One real person's reaction
 

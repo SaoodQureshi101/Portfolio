@@ -15,7 +15,7 @@ This project is a complete multi-page portfolio prepared for GitHub Pages deploy
 
 ## Quick publish to GitHub Pages
 
-Repository: `https://github.com/MrQureshi-android/Portfolio`
+Repository: `https://github.com/SaoodQureshi101/Portfolio`
 
 1. In this folder, run:
 
@@ -24,7 +24,7 @@ git init
 git add .
 git commit -m "Initial live portfolio"
 git branch -M main
-git remote add origin https://github.com/MrQureshi-android/Portfolio.git
+git remote add origin https://github.com/SaoodQureshi101/Portfolio.git
 git push -u origin main
 ```
 
@@ -38,7 +38,7 @@ git push -u origin main
 
 4. Live URL:
 
-`https://mrqureshi-android.github.io/Portfolio/`
+`https://saoodqureshi101.github.io/Portfolio/`
 
 5. Verify these pages load from the live URL:
    - `/`
