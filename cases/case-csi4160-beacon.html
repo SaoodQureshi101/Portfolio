@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study | CSI 4160 Beacon</title>
+  <meta name="description" content="Case study for CSI 4160 Beacon real-time wireless signal processing pipeline." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="../index.html">Saood Qureshi Portfolio</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../work.html">Work</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <header class="case-header">
+        <h1 class="page-title">CSI 4160 Beacon</h1>
+        <p><strong>Repository:</strong> <a href="https://github.com/SaoodQureshi101/Beacon" target="_blank" rel="noopener noreferrer">github.com/SaoodQureshi101/Beacon</a></p>
+        <p><strong>Project:</strong> Real-time wireless signal processing pipeline with FastAPI, React, Flask, PostgreSQL, and MongoDB.</p>
+      </header>
+
+      <section class="case-section">
+        <h2>Architecture</h2>
+        <p>
+          The system combines a FastAPI streaming backend, two dashboards (React and Flask), and dual-database persistence.
+          It supports both streaming and batch modes to compare operational behavior and performance.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <h2>Implemented Features</h2>
+        <h3>Real-time Processing Upgrade</h3>
+        <ul class="list-tight">
+          <li>WebSocket streaming endpoint: <code>/ws/signal</code></li>
+          <li>Continuous signal ingestion and live inference</li>
+          <li>Live dashboard updates instead of batch-only workflows</li>
+        </ul>
+
+        <h3>Feature Engineering Layer</h3>
+        <ul class="list-tight">
+          <li>Signal amplitude variance</li>
+          <li>FFT frequency-domain features</li>
+          <li>Time-windowed signal segmentation</li>
+        </ul>
+
+        <h3>Simple Classification</h3>
+        <ul class="list-tight">
+          <li>Threshold-based classes: <code>walking</code>, <code>standing</code>, <code>idle</code></li>
+          <li>Switchable mode support for basic ML model workflows</li>
+          <li>Training utility included for model updates</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Dashboards and Observability</h2>
+        <p><strong>React dashboard:</strong> live signal graph, classification output, latency/throughput/accuracy metrics.</p>
+        <p><strong>Flask dashboard:</strong> live canvas signal graph, classification output, and real-time metrics.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>API, Storage, and Benchmarking</h2>
+        <ul class="list-tight">
+          <li>REST API for health, metrics, history, and mode switching</li>
+          <li>PostgreSQL persistence for structured records</li>
+          <li>MongoDB persistence for flexible document history</li>
+          <li>Batch vs streaming processing endpoints</li>
+          <li>Benchmark script for latency checks</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Project Structure</h2>
+        <ul class="list-tight">
+          <li><code>backend/</code>: FastAPI backend, persistence layer, benchmarking, model training</li>
+          <li><code>src/</code>: signal pipeline and classifier</li>
+          <li><code>frontend/react-dashboard/</code>: Vite + React dashboard</li>
+          <li><code>frontend/flask-dashboard/</code>: Flask dashboard</li>
+          <li><code>docker-compose.yml</code>: full-stack orchestration</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Run with Docker (Recommended)</h2>
+        <p><code>docker-compose up --build</code></p>
+        <ul class="list-tight">
+          <li>FastAPI backend: <code>http://localhost:8000</code></li>
+          <li>FastAPI docs: <code>http://localhost:8000/docs</code></li>
+          <li>React dashboard: <code>http://localhost:5173</code></li>
+          <li>Flask dashboard: <code>http://localhost:5000</code></li>
+          <li>PostgreSQL: <code>localhost:5432</code></li>
+          <li>MongoDB: <code>localhost:27017</code></li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Core API Endpoints</h2>
+        <ul class="list-tight">
+          <li><code>GET /api/health</code></li>
+          <li><code>GET /api/metrics</code></li>
+          <li><code>GET /api/history?source=postgres|mongo&limit=300</code></li>
+          <li><code>POST /api/mode?new_mode=streaming|batch</code></li>
+          <li><code>POST /api/process-batch?size=256</code></li>
+          <li><code>WS /ws/signal</code></li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Local Setup (Without Docker)</h2>
+        <ul class="list-tight">
+          <li><code>pip install -r requirements.txt</code></li>
+          <li><code>uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000</code></li>
+          <li><code>python frontend/flask-dashboard/app.py</code></li>
+        </ul>
+        <p><strong>React local:</strong></p>
+        <ul class="list-tight">
+          <li><code>cd frontend/react-dashboard</code></li>
+          <li><code>npm install</code></li>
+          <li><code>npm run dev</code></li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Utilities</h2>
+        <ul class="list-tight">
+          <li>Train model: <code>python backend/train_model.py</code></li>
+          <li>Run benchmark: <code>python backend/benchmark.py</code></li>
+        </ul>
+      </section>
+
+      <a class="btn secondary" href="../work.html">Back to Work</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Case study 5 of 5.</div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
